@@ -1,0 +1,30 @@
+/* variables */
+
+:root {
+  --main-font: "Poppins", sans-serif;
+}
+
+/* global styles */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+[class$="__container"] {
+  max-width: 40rem;
+  width: 90%; /* cuando el ancho sea menos de 400px va a ocupar el 90% */
+  margin: 0 auto; /* centra el contenedor */
+}
