@@ -2,6 +2,10 @@
 
 :root {
   --main-font: "Poppins", sans-serif;
+  --initial-gradient: #48c6ef;
+  --final-gradient: #6f86d6;
+  --white: #fff;
+  --black: #111;
 }
 
 /* global styles */
@@ -19,7 +23,7 @@ html {
 
 body {
   font-family: var(--main-font);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
 }
 
@@ -27,4 +31,104 @@ body {
   max-width: 40rem;
   width: 90%; /* cuando el ancho sea menos de 400px va a ocupar el 90% */
   margin: 0 auto; /* centra el contenedor */
+}
+
+/* weather-card */
+
+.weather-card {
+  background-image: linear-gradient(
+    to right,
+    var(--initial-gradient) 0%,
+    var(--final-gradient) 100%
+  );
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+@media (min-width: 468px) {
+  .weather-card {
+    margin-top: 16rem;
+    padding: 3rem;
+  }
+}
+
+.form__select {
+  background-color: var(--white);
+  margin-top: 2rem;
+  width: 80%;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border-style: solid;
+}
+
+.form__container-flex {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.form__input {
+  max-width: 80%;
+  padding: 0.4rem 2rem;
+  border-radius: 2rem;
+  border-style: solid;
+}
+
+.form__btn {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--white);
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60%;
+}
+
+.form__btn:hover {
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 60%;
+}
+
+/* weather-card__main */
+.weather-card__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+}
+
+.weather-card-image {
+  margin-top: 4rem;
+}
+
+.weather-icon {
+  width: 20rem;
+  height: 20rem;
+}
+
+.information {
+  text-align: center;
+}
+
+.information__temperature {
+  margin: 1rem 0;
+  font-size: 4.4rem;
+  font-weight: 600;
+}
+
+.information__city {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.information__max-temperature,
+.information__min-temperature {
+  font-size: 1.8rem;
 }

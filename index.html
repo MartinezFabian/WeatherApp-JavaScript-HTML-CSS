@@ -17,13 +17,6 @@
     <article class="weather-card weather-card__container">
       <header class="weather-card__header">
         <form class="form">
-          <input
-            class="form__input"
-            type="text"
-            id="input__city"
-            placeholder="Escribe tu ciudad aquí"
-          />
-
           <select class="form__select" id="select-country">
             <option disabled selected value="">-- Seleccione el país --</option>
             <option value="AR">Argentina</option>
@@ -35,22 +28,31 @@
             <option value="PE">Perú</option>
           </select>
 
-          <button class="form__btn" id="button-submit" type="submit">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="btn-icon"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-          </button>
+          <div class="form__container-flex">
+            <input
+              class="form__input"
+              type="text"
+              id="input__city"
+              placeholder="Escribe tu ciudad aquí"
+            />
+
+            <button class="form__btn" id="button-submit" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="btn-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
         </form>
       </header>
 
@@ -82,10 +84,10 @@
           </svg>
         </div>
         <div class="information">
-          <h1 class="information__temperature">29°c</h1>
-          <h2 class="information__city">Buenos Aires</h2>
-          <p class="information__max-temperature">Max: 32°c</p>
-          <p class="information__min-temperature">Min: 27°c</p>
+          <h1 id="temperature" class="information__temperature">29°c</h1>
+          <h2 id="city" class="information__city">Buenos Aires</h2>
+          <p id="max-temperature" class="information__max-temperature">Max: 32°c</p>
+          <p id="min-temperature" class="information__min-temperature">Min: 27°c</p>
         </div>
       </main>
     </article>
