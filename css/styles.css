@@ -6,6 +6,7 @@
   --final-gradient: #6f86d6;
   --white: #fff;
   --black: #111;
+  --red: #ba0909;
 }
 
 /* global styles */
@@ -42,10 +43,10 @@ body {
     var(--final-gradient) 100%
   );
   margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
   padding: 2rem;
   border-radius: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 @media (min-width: 468px) {
@@ -131,4 +132,27 @@ body {
 .information__max-temperature,
 .information__min-temperature {
   font-size: 1.8rem;
+}
+
+/* alerts */
+
+.alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.alert {
+  max-width: 40rem;
+  width: 90%;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+
+.alert__text {
+  text-align: center;
+  font-weight: 600;
 }
