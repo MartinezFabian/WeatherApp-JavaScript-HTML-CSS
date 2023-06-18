@@ -16,7 +16,7 @@
   <body>
     <article class="weather-card weather-card__container">
       <header class="weather-card__header">
-        <form class="form">
+        <form id="form" class="form">
           <select class="form__select" id="select-country">
             <option disabled selected value="">-- Seleccione el país --</option>
             <option value="AR">Argentina</option>
@@ -32,7 +32,7 @@
             <input
               class="form__input"
               type="text"
-              id="input__city"
+              id="input-city"
               placeholder="Escribe tu ciudad aquí"
             />
 
@@ -91,5 +91,7 @@
         </div>
       </main>
     </article>
+
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
