@@ -77,6 +77,18 @@ class UserInterface {
     informationGrid.appendChild(humidityElement);
   }
 
+  static displayLoader() {
+    // limpiar el HTML previo
+    UserInterface.clearHTML();
+
+    // generar HTML del loader
+
+    const loader = document.createElement("span");
+    loader.classList.add("loader");
+
+    informationContainer.appendChild(loader);
+  }
+
   static clearHTML() {
     // mientras el elemento informationContainer tenga un primer hijo
     while (informationContainer.firstChild) {

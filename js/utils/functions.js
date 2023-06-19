@@ -49,6 +49,9 @@ function fetchGeographicalCoordinates(country, city) {
 }
 
 function fetchWeatherData(lat, lon, city) {
+  // mostramos un spinner de carga
+  UserInterface.displayLoader();
+
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`;
 
   fetch(url)
