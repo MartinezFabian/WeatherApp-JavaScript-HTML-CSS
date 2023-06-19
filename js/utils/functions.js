@@ -38,9 +38,9 @@ function fetchGeographicalCoordinates(country, city) {
         const lat = data[0].lat;
         const lon = data[0].lon;
 
-        fetchWeatherData(lat, lon);
+        fetchWeatherData(lat, lon, city);
       } else {
-        console.log("No se encontraron coordenadas para la ubicación");
+        UserInterface.displayAlert("Ubicación no válida, intenta con otra ubicación distinta");
       }
     })
     .catch((error) => {
@@ -48,8 +48,8 @@ function fetchGeographicalCoordinates(country, city) {
     });
 }
 
-function fetchWeatherData(lat, lon) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+function fetchWeatherData(lat, lon, city) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`;
 
   fetch(url)
     .then((response) => {
@@ -62,7 +62,7 @@ function fetchWeatherData(lat, lon) {
       }
     })
     .then((data) => {
-      console.log(data);
+      UserInterface.displayWeather(data, city);
     })
     .catch((error) => {
       console.log(error);

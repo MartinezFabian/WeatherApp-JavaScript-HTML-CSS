@@ -42,7 +42,7 @@ body {
     var(--initial-gradient) 0%,
     var(--final-gradient) 100%
   );
-  margin-top: 8rem;
+  margin-top: 7rem;
   margin-bottom: 3rem;
   padding: 2rem;
   border-radius: 2rem;
@@ -51,7 +51,7 @@ body {
 
 @media (min-width: 468px) {
   .weather-card {
-    margin-top: 16rem;
+    margin-top: 12rem;
     padding: 3rem;
   }
 }
@@ -129,8 +129,14 @@ body {
   font-weight: 600;
 }
 
-.information__max-temperature,
-.information__min-temperature {
+.information__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.information__additional {
   font-size: 1.8rem;
 }
 
