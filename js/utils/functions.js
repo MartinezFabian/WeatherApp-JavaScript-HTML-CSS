@@ -38,7 +38,7 @@ function fetchGeographicalCoordinates(country, city) {
         const lat = data[0].lat;
         const lon = data[0].lon;
 
-        fetchWeatherData(lat, lon, city);
+        fetchWeatherData(lat, lon);
       } else {
         UserInterface.displayAlert("Ubicación no válida, intenta con otra ubicación distinta");
       }
@@ -48,7 +48,7 @@ function fetchGeographicalCoordinates(country, city) {
     });
 }
 
-function fetchWeatherData(lat, lon, city) {
+function fetchWeatherData(lat, lon) {
   // mostramos un spinner de carga
   UserInterface.displayLoader();
 
@@ -65,7 +65,7 @@ function fetchWeatherData(lat, lon, city) {
       }
     })
     .then((data) => {
-      UserInterface.displayWeather(data, city);
+      UserInterface.displayWeather(data);
     })
     .catch((error) => {
       console.log(error);

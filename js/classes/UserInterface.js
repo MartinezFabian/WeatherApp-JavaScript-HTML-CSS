@@ -24,9 +24,10 @@ class UserInterface {
     }, 3000);
   }
 
-  static displayWeather(weather, city) {
+  static displayWeather(weather) {
     // desestructurar las propiedades del objeto weather
     const {
+      name,
       main: { temp, temp_min, temp_max, feels_like, humidity },
     } = weather;
 
@@ -43,7 +44,7 @@ class UserInterface {
 
     const cityElement = document.createElement("h2");
     cityElement.classList.add("information__city");
-    cityElement.textContent = city;
+    cityElement.textContent = name;
 
     informationContainer.appendChild(cityElement);
 
