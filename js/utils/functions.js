@@ -20,7 +20,7 @@ function searchWeather(e) {
 }
 
 function fetchGeographicalCoordinates(country, city) {
-  const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${API_KEY}`;
+  const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${API_KEY}`;
 
   // obtener coordenadas geográficas (latitud y longitud) utilizando Geocoding API
   fetch(geocodingUrl)
