@@ -27,4 +27,4 @@ The project was developed as a hands-on exercise to apply the concepts learned a
 
 ## Online Demo
 
-You can access the online demo of this project through the following link: [Weather App]()
+You can access the online demo of this project through the following link: [Weather App](https://martinezfabian.github.io/WeatherApp-JavaScript-HTML-CSS/)
